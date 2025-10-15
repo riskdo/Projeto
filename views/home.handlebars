@@ -1,0 +1,31 @@
+<section>
+  {{!-- Exemplo de IF/ELSE --}}
+  {{#if showBanner}}
+    <div class="banner">Bem-vindo, {{usuario.nome}}! (Nível {{usuario.nivel}})</div>
+  {{else}}
+    <div class="banner small">Olá visitante!</div>
+  {{/if}}
+
+  <p>{{descricao}}</p>
+
+  <ul>
+    <h2>Produtos em Destaque</h2>
+
+{{#each produtos}}
+  <div class="produto {{#unless ativo}}desativado{{/unless}}">
+    <p>{{nome}} - <strong>{{preco}}</strong></p>
+
+    {{#if ativo}}
+      <button class="comprar">Comprar</button>
+    {{else}}
+      <span class="fora-estoque">Fora de estoque</span>
+    {{/if}}
+  </div>
+{{/each}}
+  </ul>
+
+  <button id="btnClique">Clique aqui</button>
+  <div id="mensagemSegredo" class="mensagem-segredo">
+  ⚠️ Esta página possui um segredo... será que você consegue descobrir?
+  </div>
+</section>

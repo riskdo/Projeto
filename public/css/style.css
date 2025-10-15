@@ -1,0 +1,135 @@
+/* === RESET BÁSICO === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === ESTILO GERAL === */
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e0e8ff;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner {
+  background: #0ea5ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.banner.small {
+  background: #475569;
+}
+
+ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+li {
+  background: #1e293b;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+button {
+  background: #0ea5ff;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #38bdf8;
+}
+
+footer.assinatura {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 0;
+  color: #666;
+  font-size: 0.8rem;
+  background-color: #0d1117;
+  border-top: 1px solid #222;
+  user-select: none;
+}
+
+footer.assinatura .riscado {
+  text-decoration: line-through;
+  color: #666;
+  cursor: help;
+  transition: color 0.3s ease;
+}
+
+footer.assinatura .riscado:hover {
+  color: #3b82f6; /* Azul suave quando passa o mouse */
+}
+
+.produto {
+  background-color: #1a2332;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+  transition: transform 0.2s ease;
+}
+
+.produto:hover {
+  transform: scale(1.02);
+}
+
+.produto.desativado {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.comprar {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comprar:hover {
+  background-color: #0d8bf2;
+}
+
+.fora-estoque {
+  color: #ff6666;
+  font-weight: bold;
+}
+
+.mensagem-segredo {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(33, 150, 243, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.6);
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 999;
+}
