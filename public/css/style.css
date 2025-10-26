@@ -131,5 +131,73 @@ footer.assinatura .riscado:hover {
   box-shadow: 0 0 10px rgba(33, 150, 243, 0.6);
   opacity: 0;
   transition: opacity 1s ease;
-  z-index: 999;
+  z-index: 5; /* reduzido para ficar atrás do menu */
+  pointer-events: none; /* impede bloqueio de cliques */;
+}
+
+/* nav no header */
+.site-header {
+  padding: 18px 0;
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+}
+
+.site-header .nav {
+  margin-top: 8px;
+}
+
+.site-header {
+  padding: 18px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+.site-header .nav a {
+  color: #a0bdfd;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  position: relative;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* efeito hover com brilho azul */
+.site-header .nav a:hover {
+  color: #fff;
+  background: rgba(14, 165, 255, 0.15);
+  box-shadow: 0 0 8px rgba(14, 165, 255, 0.4);
+}
+
+/* página ativa destacada */
+.site-header .nav a.active {
+  color: #fff;
+  background: rgba(14, 165, 255, 0.25);
+  box-shadow: 0 0 10px rgba(14, 165, 255, 0.6);
+}
+
+/* estilo da página sobre */
+.sobre {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.tecnologias li {
+  background: #0b1220;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }

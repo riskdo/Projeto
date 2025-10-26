@@ -6,9 +6,13 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Meu Projeto com Handlebars</h1>
-  </header>
+  <header class="site-header">
+    <h1> Meu Projeto com Handlebars. =D </h1>
+  <nav class="nav">
+    <a href="/" class="{{#if isHome}}active{{/if}}">Home</a>
+    <a href="/sobre" class="{{#if isSobre}}active{{/if}}">Sobre</a>
+  </nav>
+</header>
 
   {{{body}}}
 
